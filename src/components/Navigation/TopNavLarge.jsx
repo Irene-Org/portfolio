@@ -43,15 +43,27 @@ const StyledNavLarge = styled.nav`
                 cursor:pointer;
                 padding: 0 4px;
                 border-bottom: 3px solid transparent;
+                position:relative;
 
-                
-
+                & a:hover,
                 & a.active
                 {
-                    color: #00B9DE;
+                    color: ${ ( { theme } ) => theme.highlight };
                     transition: color 0.2s ease;
-                    border-bottom: 3px solid #00B9DE;
                 }
+
+                & a.active:after
+                {
+                    content: " ";
+                    width:100%;
+                    height:4px;
+                    border-radius:2px;
+                    background:${ ( { theme } ) => theme.highlight };
+                    position:absolute;
+                    left:0;
+                    bottom:-6px;
+                }                   
+                
             }
 
             .toggler
@@ -91,7 +103,11 @@ function TopNavLarge ( { toggleTheme, mode } )
                 }
 
                 <li className="nav-item">
-                    <a href="" >Résumé</a>
+                    <a
+                        href="#"
+                        target="_blank"
+                    >
+                        Résumé</a>
                 </li>
 
                 <li className="nav-item toggler">
