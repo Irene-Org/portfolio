@@ -4,6 +4,8 @@ import Link from "./Link";
 import { navList } from "../../utils";
 import OverLay from "../OverLay";
 
+/* Menu inspiration https://codepen.io/hadarweiss/pen/WvEXeK?editors=0110 */
+
 
 const getMin = () =>
 {

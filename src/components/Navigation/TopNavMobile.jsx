@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from "./Link";
 import Logo from "./Logo";
 import ToggleButtons from "./ToggleButtons";
-import { navList } from "../../utils";
 
 const StyledNavMobile = styled.nav`
  @media screen and (min-width:768px)
