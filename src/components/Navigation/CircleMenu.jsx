@@ -52,6 +52,7 @@ const BottomToggler = styled.button`
     @media screen and (min-width:768px)
     {
         display:none;
+        pointer-events:none;
     }
 
     > div
@@ -80,6 +81,12 @@ const CenterMenu = styled.div`
         width: 100%;
         height: 100%;
         transform: translateX(-39px);
+     }
+
+     @media screen and (min-width:768px)
+     {
+         display:none;
+        pointer-events:none;
      }
 
         
@@ -117,6 +124,14 @@ const StyledLi = styled.li`
          transform: ${ getTransform( props.index ) };
          opacity:1;
         `}; 
+
+        
+     @media screen and (min-width:768px)
+     {
+         display:none;
+        pointer-events:none;
+     }
+
 
 `;
 

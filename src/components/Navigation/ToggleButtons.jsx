@@ -10,6 +10,15 @@ const Toggle = styled.button`
     background:none;
     position:relative;
     display:inline-block;
+    min-width:30px;
+    min-height:30px;
+  
+
+     @media screen and (min-width:768px)
+     {
+        width:100%;
+        height:100%;
+     }
 
     img
     {
@@ -41,7 +50,7 @@ function ToggleButtons ( { toggler, mode } )
 
 
     return (
-        <Toggle mode={ mode } onClick={ toggler }>
+        <Toggle tabIndex="0" mode={ mode } onClick={ toggler }>
 
             <img
 

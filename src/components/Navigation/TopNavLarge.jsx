@@ -67,7 +67,9 @@ const StyledNavLarge = styled.nav`
                     position:absolute;
                     left:0;
                     bottom:-6px;
-                }                   
+                }  
+
+                               
                 
             }
 
@@ -76,6 +78,7 @@ const StyledNavLarge = styled.nav`
                 padding:0;
                 width:40px;
                 height:40px;
+               
             }
         }
     }
