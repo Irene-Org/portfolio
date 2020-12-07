@@ -10,8 +10,6 @@ const Toggle = styled.button`
     background:none;
     position:relative;
     display:inline-block;
-    width:100%;
-    height:100%;
 
     img
     {

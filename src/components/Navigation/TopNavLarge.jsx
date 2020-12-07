@@ -33,8 +33,13 @@ const StyledNavLarge = styled.nav`
             list-style-type:none;
             text-transform:capitalize;
             font-weight:700;
-            min-width:50%;
+            min-width:65%;
             margin-right:10px;
+
+            @media screen and (min-width:1200px)
+            {
+                min-width:50%;
+            }
 
 
             .nav-item
@@ -104,8 +109,9 @@ function TopNavLarge ( { toggleTheme, mode } )
 
                 <li className="nav-item">
                     <a
-                        href="#"
+                        href="http://localhost:3000/"
                         target="_blank"
+                        rel="noreferrer"
                     >
                         Résumé</a>
                 </li>

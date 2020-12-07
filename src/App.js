@@ -11,7 +11,12 @@ import
 
 import { useDarkMode } from "./hooks";
 
-import { NavLarge } from "./components";
+import 
+{
+  NavLarge,
+  NavMobile,
+  CircleMenu
+} from "./components";
 
 const styles =
 {
@@ -48,8 +53,20 @@ function App ()
     {
       setLoaded( true );
     }, 1000 );
+
+
+
     return () => clearTimeout( timer );
   }, [] );
+
+
+  useEffect( () =>
+  {
+    window.addEventListener( "storage", themeToggler );
+
+    return () => window.removeEventListener( "storage", themeToggler );
+
+  }, [ themeToggler ] );
 
   if ( !loaded ) return <div style={ stylesN } >
 
@@ -77,6 +94,12 @@ function App ()
         <NavLarge
           mode={ theme }
           toggleTheme={ themeToggler } />
+
+        <NavMobile
+          mode={ theme }
+          toggleTheme={ themeToggler } />
+
+        <CircleMenu />
 
 
         {
