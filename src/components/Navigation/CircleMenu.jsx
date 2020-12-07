@@ -103,8 +103,8 @@ const StyledLi = styled.li`
     top:50%;
     transform: rotate(0) translate(-50%,-50%);
     opacity:0;
-    transition: transform 0.6s ease-out,    
-                opacity 0.4s ease;
+    transition: transform 0.3s ease-out,    
+                opacity 0.6s ease;
 
     background: ${ ( { theme } ) => theme.socialBg };
     a

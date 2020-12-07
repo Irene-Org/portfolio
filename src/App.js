@@ -15,7 +15,8 @@ import
 {
   NavLarge,
   NavMobile,
-  CircleMenu
+  CircleMenu,
+  SocialBtns
 } from "./components";
 
 const styles =
@@ -100,6 +101,8 @@ function App ()
           toggleTheme={ themeToggler } />
 
         <CircleMenu />
+
+        <SocialBtns />
 
 
         {
