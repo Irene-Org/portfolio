@@ -166,25 +166,25 @@ function CircleMenu ()
                             <>
                                 {
                                     navList.map( ( item, i ) =>
-                                        (
-                                            <StyledLi
-                                                isOpen={ isOpen }
-                                                index={ i }
-                                                key={ item } >
-                                                <Link
-                                                    activeClass="active"
-                                                    to={ item }
-                                                    spy={ true }
-                                                    smooth={ true }
-                                                    offset={ -100 }
-                                                    duration={ 500 }
-                                                    toggle={ toggleMenu }
+                                    (
+                                        <StyledLi
+                                            isOpen={ isOpen }
+                                            index={ i }
+                                            key={ item } >
+                                            <Link
+                                                activeClass="active"
+                                                to={ item }
+                                                spy={ true }
+                                                smooth={ true }
+                                                offset={ -100 }
+                                                duration={ 500 }
+                                                toggle={ toggleMenu }
 
-                                                >
-                                                    { item }
-                                                </Link>
-                                            </StyledLi>
-                                        ) )
+                                            >
+                                                { item }
+                                            </Link>
+                                        </StyledLi>
+                                    ) )
                                 }
 
                                 <StyledLi

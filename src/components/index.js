@@ -1,13 +1,5 @@
-import TopNavLarge from "./Navigation/TopNavLarge";
-import TopNavMobile from "./Navigation/TopNavMobile";
-import CircleMenu from "./Navigation/CircleMenu";
-import SocialBtns from "./SocialBtns";
-
-
-export
-{
-    TopNavLarge as NavLarge,
-    TopNavMobile as NavMobile,
-    CircleMenu,
-    SocialBtns
-};
+export { default as DeviceLoaders } from "./Loaders/DeviceLoaders";
+export { default as SocialBtns } from "./SocialBtns";
+export { default as CircleMenu } from "./Navigation/CircleMenu";
+export { default as NavLarge } from "./Navigation/TopNavLarge";
+export { default as NavMobile } from "./Navigation/TopNavLarge";

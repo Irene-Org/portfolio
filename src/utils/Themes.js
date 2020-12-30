@@ -2,7 +2,7 @@ const light =
 {
     bodyBg: "#FFFFFF",
     bodyText: "#2C3C41",
-    highlight: "#05EDFC",
+    highlight: "#0E9FA8",//"#05EDFC"
     sectionBg: "#FBFDFD",
     stackBg: "#003848",
     formBg: "rgba(0, 56, 72, 0.87)",

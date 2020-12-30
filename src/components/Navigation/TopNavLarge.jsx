@@ -47,7 +47,6 @@ const StyledNavLarge = styled.nav`
                 font-size: 1.2rem;
                 cursor:pointer;
                 padding: 0 4px;
-                border-bottom: 3px solid transparent;
                 position:relative;
 
                 & a:hover,

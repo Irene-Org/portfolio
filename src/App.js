@@ -16,7 +16,8 @@ import
   NavLarge,
   NavMobile,
   CircleMenu,
-  SocialBtns
+  SocialBtns,
+  DeviceLoaders
 } from "./components";
 
 const styles =
@@ -30,16 +31,6 @@ const styles =
 
 };
 
-const stylesN =
-{
-  width: "100vw",
-  height: "100vh",
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  background: "coral"
-};
 
 function App () 
 {
@@ -53,9 +44,7 @@ function App ()
     const timer = setTimeout( () =>
     {
       setLoaded( true );
-    }, 1000 );
-
-
+    }, 6000 );
 
     return () => clearTimeout( timer );
   }, [] );
@@ -69,10 +58,10 @@ function App ()
 
   }, [ themeToggler ] );
 
-  if ( !loaded ) return <div style={ stylesN } >
-
-  </div>;
-
+  if ( !loaded )
+  {
+    return <DeviceLoaders />;
+  }
 
   return (
     <ThemeProvider theme={ themeMode }>
