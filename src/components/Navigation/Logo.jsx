@@ -17,6 +17,7 @@ const StyledLogo = styled.button`
 
 function Logo ()
 {
+
     return (
         <StyledLogo
             onClick={ () => scroll.scrollToTop( { duration: 300 } ) } >

@@ -116,6 +116,10 @@ const StyledLi = styled.li`
     background: ${ ( { theme } ) => theme.socialBg };
     a
     {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: ${ ( { theme } ) => theme.socialText } ;
         transform: rotate(${ ( { index } ) => reverseText( index ) }deg)
     }
@@ -139,9 +143,9 @@ function CircleMenu ()
 {
     const [ isOpen, setIsOpen ] = useState( false );
 
-    const toggleMenu = () =>
+    const toggleMenu = ( state = false ) =>
     {
-        setIsOpen( !isOpen );
+        setIsOpen( state );
     };
 
     useEffect( () => 
@@ -159,7 +163,7 @@ function CircleMenu ()
 
                 <OverLay
                     isOpen={ isOpen }
-                    onClick={ toggleMenu } >
+                    onClick={ () => toggleMenu( !isOpen ) } >
 
                     <CenterMenu>
                         <ul className="links" >
@@ -211,7 +215,7 @@ function CircleMenu ()
 
             <BottomToggler
                 isOpen={ isOpen }
-                onClick={ toggleMenu }>
+                onClick={ () => toggleMenu( !isOpen ) }>
                 <div ></div>
                 <div ></div>
                 <div ></div>

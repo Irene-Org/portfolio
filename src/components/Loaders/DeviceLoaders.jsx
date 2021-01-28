@@ -34,15 +34,24 @@ const button = keyframes`
 {  
    0%,100%
    {
-    height: 20px;
+    background-color: transparent;
+    height: 0px;
     width: 80%;
     left: 50%;
     top: calc(100% + 20px);
+    border-bottom: 50px solid #ccc;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-radius: 0px;
    }  
 
    25%
    {
-    
+    background-color: #ccc;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius:10px;
     height: 10px;
     width: 80%;
     left: 50%;
@@ -50,7 +59,12 @@ const button = keyframes`
    }
 
    50%
-   {
+   {  
+    background-color: #ccc;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;     
+    border-radius:10px;
     left: 50%;
     height: 12px;
     width: 12px;
@@ -58,7 +72,12 @@ const button = keyframes`
    }
 
    75%
-   {
+   { 
+    background-color: #ccc;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;  
+    border-radius:10px;
     left: 50%;
     height: 6px;
     width: 6px;
@@ -119,7 +138,7 @@ const Loader = styled.div`
         width: 270px;
         border-radius: 8px;
         transition: all;
-        animation: ${ frame } 4s cubic-bezier(0.6,1.5,0.6,1) infinite ;
+       animation: ${ frame } 4s cubic-bezier(0.6,1.5,0.6,1) infinite ; 
 
     }
 
@@ -135,18 +154,21 @@ const Loader = styled.div`
 
         img
         {
-            width: 80%;
-            height:60%;
+            width: 40%;
+            height:40%;
         }
 
     }
 
     .button-bar
     {
-        background-color: #ccc;
-        height: 20px;
+        background-color: transparent;
+        height: 0px;
         width: 80%;
-        border-radius: 10px;
+        border-radius: 0px;
+        border-bottom: 50px solid #ccc;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
         position: absolute;
         left: 50%;
         top: calc(100% + 20px);

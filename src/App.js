@@ -44,7 +44,7 @@ function App ()
     const timer = setTimeout( () =>
     {
       setLoaded( true );
-    }, 6000 );
+    }, 5000 );
 
     return () => clearTimeout( timer );
   }, [] );
@@ -58,66 +58,66 @@ function App ()
 
   }, [ themeToggler ] );
 
-  if ( !loaded )
-  {
-    return <DeviceLoaders />;
-  }
-
   return (
     <ThemeProvider theme={ themeMode }>
-      <>
-        <GlobalStyles />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+      {
+        loaded ?
+          <>
+            <GlobalStyles />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
-        <NavLarge
-          mode={ theme }
-          toggleTheme={ themeToggler } />
+            <NavLarge
+              mode={ theme }
+              toggleTheme={ themeToggler } />
 
-        <NavMobile
-          mode={ theme }
-          toggleTheme={ themeToggler } />
+            <NavMobile
+              mode={ theme }
+              toggleTheme={ themeToggler } />
 
-        <CircleMenu />
+            <CircleMenu />
 
-        <SocialBtns />
-
-
-        {
-          navList.map( h =>
-            (
-
-              <div style={ styles } id={ h } key={ h } >
-
-                <h1>{ h.toLocaleUpperCase() }</h1>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
+            <SocialBtns />
 
 
+            {
+              navList.map( h =>
+              (
+
+                <div style={ styles } id={ h } key={ h } >
+
+                  <h1>{ h.toLocaleUpperCase() }</h1>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt, aperiam sequi voluptatum eius voluptatem doloremque eum ratione commodi rerum, officia iusto. Tempora architecto earum temporibus sequi quas magni? Sit.</p>
 
 
 
-              </div>
 
-            ) )
-        }
 
-      </>
+                </div>
+
+              ) )
+            }
+
+          </>
+          :
+          <DeviceLoaders />
+      }
     </ThemeProvider>
 
   );
